@@ -3,6 +3,7 @@
     "axios": "^1.6.8",
     "cheerio": "^1.0.0-rc.12",
     "jsdom": "^24.0.0",
+    "natural": "^7.0.6",
     "node-telegram-bot-api": "^0.65.1",
     "rivescript": "^2.2.1"
   }

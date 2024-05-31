@@ -1,5 +1,6 @@
 const axios = require('axios');
 const RiveScript = require('rivescript');
+const natural = require('natural');
 
 
 const string1 = "quem deve aguardar para doar sangue?"
