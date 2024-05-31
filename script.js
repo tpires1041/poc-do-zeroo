@@ -38,7 +38,31 @@ bott.onText(/\/echo (.+)/, (msg, match) => {
 bott.on('message', (msg) => {
     const chatId = msg.chat.id;
 
-    let userInput = msg.text;
+    let userInput = msg.text.toLowerCase();
+
+    if (natural.JaroWinklerDistance(userInput, string1) > 0.9 || userInput == 1){
+        userInput = 1;
+    } else {
+        if (natural.JaroWinklerDistance(userInput, string2) > 0.9 || userInput == 2){
+            userInput = 2;
+        } else {
+            if (natural.JaroWinklerDistance(userInput, string3) > 0.9 || userInput == 3){
+                userInput = 3;
+            } else {
+                if (natural.JaroWinklerDistance(userInput, string4) > 0.9 || userInput == 4){
+                    userInput = 4;
+                } else {
+                    if (natural.JaroWinklerDistance(userInput, string5) > 0.9 || userInput == 5){
+                        userInput = 5;
+                    } else {
+                        if (natural.JaroWinklerDistance(userInput, string6) > 0.9 || userInput == 6){
+                            userInput = 6;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     bot.reply("local-user", userInput).then(function (reply) {
         bott.sendMessage(chatId, reply);
