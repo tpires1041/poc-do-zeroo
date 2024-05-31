@@ -1,5 +1,5 @@
 const axios = require('axios');
-const RiveScript = require('rivescript')
+const RiveScript = require('rivescript');
 
 let bot = new RiveScript();
 
@@ -11,27 +11,6 @@ axios.get(brains).then(response => {
 }).catch(error => {
     console.error(error);
 });
-
-
-function botReply(message){
-   return `${message}`;
-}
-
-function selfReply(message){
- message_container.innerHTML += `<div class="self">${message}</div>`;
- location.href = '#edge';
- 
- bot.reply("local-user", message).then(function(reply) {0
- botReply(reply);
- });
-}
-function botReady(){
- bot.sortReplies();
- botReply('Olá, tudo bem? Me chamo DoaBot e fui feito para auxiliar no processo de doação de sangue 😊🧑‍⚕️');
-}
-function botNotReady(err){
- console.log("An error has occurred.", err);
-}
 
 const TelegramBot = require('node-telegram-bot-api');
 
