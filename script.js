@@ -34,3 +34,12 @@ bott.onText(/\/echo (.+)/, (msg, match) => {
     bott.sendMessage(chatId, resp);
 });
 
+bott.on('message', (msg) => {
+    const chatId = msg.chat.id;
+
+    let userInput = msg.text;
+
+    bot.reply("local-user", userInput).then(function (reply) {
+        bott.sendMessage(chatId, reply);
+    });
+});
