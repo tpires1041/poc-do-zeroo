@@ -11,7 +11,7 @@ const string5 = "qual o intervalo entre doações?"
 const string6 = "o que preciso para doar sangue?"
 
 
-const brains = 'https://gist.githubusercontent.com/tpires1041/da6a583aeb2d840193b091b81ed77051/raw/4604a8d30f5e414d7ee030cb47257a34889e7eb2/gistfile1.txt';
+const brains = 'https://gist.githubusercontent.com/tpires1041/da6a583aeb2d840193b091b81ed77051/raw/fe6679bc3c084a8073ac5218b816a6874bbc2c8e/gistfile1.txt';
 let bot = new RiveScript();
 
 axios.get(brains).then(response => {
@@ -29,7 +29,7 @@ const token = '6972642226:AAEoBLk1WeoLB3mgyYA9QvEpFQG4XY89qzM';
 
 const bott = new TelegramBot(token, { polling: true });
 
-bott.onText(/\/echo (.+)/, (msg, match) => {
+bott.onText((msg, match) => {
     const chatId = msg.chat.id;
     const resp = match[1];
     bott.sendMessage(chatId, resp);
